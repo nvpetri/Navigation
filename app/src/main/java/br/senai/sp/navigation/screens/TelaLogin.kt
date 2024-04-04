@@ -1,5 +1,6 @@
 package br.senai.sp.navigation.screens
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -47,7 +48,8 @@ fun TelaLogin(controleDeNavegacao: NavHostController) {
                 text = "Login",
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color.White
+                color = Color.White,
+                modifier = Modifier.clickable {  }
             )
             Spacer(modifier = Modifier.height(64.dp))
             OutlinedTextField(
