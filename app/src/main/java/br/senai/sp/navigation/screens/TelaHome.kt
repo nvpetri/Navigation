@@ -16,9 +16,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 
 @Composable
-fun TelaHome() {
+fun TelaHome(controleDeNavegacao: NavHostController) {
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = Color.Magenta
@@ -34,7 +35,9 @@ fun TelaHome() {
                 color = Color.White
             )
             Spacer(modifier = Modifier.height(32.dp))
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = {
+                controleDeNavegacao.navigate("login")
+            }) {
                 Text(text = "Voltar a tela Login")
             }
         }
@@ -44,5 +47,5 @@ fun TelaHome() {
 @Preview(showSystemUi = true)
 @Composable
 fun HomePreview() {
-    TelaHome()
+    //TelaHome(controleDeNavegacao)
 }
